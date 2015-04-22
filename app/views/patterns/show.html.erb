@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Station name:</strong>
+  <%= @pattern.station_name %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @pattern.time %>
+</p>
+
+<p>
+  <strong>Temperature:</strong>
+  <%= @pattern.temperature %>
+</p>
+
+<p>
+  <strong>Dew point:</strong>
+  <%= @pattern.dew_point %>
+</p>
+
+<p>
+  <strong>Wind direction:</strong>
+  <%= @pattern.wind_direction %>
+</p>
+
+<p>
+  <strong>Wind speed:</strong>
+  <%= @pattern.wind_speed %>
+</p>
+
+<%= link_to 'Edit', edit_pattern_path(@pattern) %> |
+<%= link_to 'Back', patterns_path %>

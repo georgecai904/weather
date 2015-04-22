@@ -1,0 +1,4 @@
+
+whenever -i
+rake db:reset
+rake bom:fetch

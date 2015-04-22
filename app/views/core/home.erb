@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>BOM Weather Reports</h1>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th>Station</th>
+    <th>Source</th>
+    <th>Time</th>
+    <th>Temperature</th>
+    <th>Rainfall</th>
+    <th>Dew point</th>
+    <th>Wind direction</th>
+    <th>Wind speed</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @periods.last.reports.each do |report| %>
+      <tr>
+        <td><%= report.station %></td>
+        <td><%= report.datasource.name %></td>
+        <td><%= report.time %></td>
+        <td><%= report.temperature %></td>
+        <td><%= report.rainfall %></td>
+        <td><%= report.dew_point %></td>
+        <td><%= report.wind_direction %></td>
+        <td><%= report.wind_speed %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Report', new_report_path %>
